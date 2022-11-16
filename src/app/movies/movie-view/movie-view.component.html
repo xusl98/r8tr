@@ -1,0 +1,16 @@
+<ion-card>
+  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+  <ion-card-header>
+    <ion-card-title>{{ movie.name }} <ion-badge color="primary">{{ movie.rating }}</ion-badge></ion-card-title>
+    <ion-card-subtitle>{{ movie.releaseYear }}</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    {{ movie.description }}
+    <br>
+    Viewed on: {{ movie.viewDate.toLocaleString() }}
+    <br>
+    <ion-button color="danger" size="large" fill="outline" (click)="presentActionSheet()">Delete</ion-button>
+    <!-- <ion-button color="danger" size="large" fill="outline" (click)="delete()">Delete</ion-button> -->
+  </ion-card-content>
+</ion-card>

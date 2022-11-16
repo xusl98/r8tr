@@ -7,7 +7,10 @@ import { IonicModule } from '@ionic/angular';
 import { MoviesPageRoutingModule } from './movies-routing.module';
 
 import { MoviesPage } from './movies.page';
-import { IonicRatingComponentModule } from 'ionic-rating-component';
+import { EditMovieComponent } from './edit-movie/edit-movie.component';
+import { StorageService } from 'src/services/storage.service';
+import { IonicStorageModule } from '@ionic/storage-angular';
+import { MovieViewComponent } from './movie-view/movie-view.component';
 
 
 @NgModule({
@@ -16,8 +19,8 @@ import { IonicRatingComponentModule } from 'ionic-rating-component';
     FormsModule,
     IonicModule,
     MoviesPageRoutingModule,
-    IonicRatingComponentModule
   ],
-  declarations: [MoviesPage]
+  declarations: [MoviesPage, EditMovieComponent, MovieViewComponent],
+  providers: []
 })
 export class MoviesPageModule {}

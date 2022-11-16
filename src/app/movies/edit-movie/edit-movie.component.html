@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title *ngIf="new">New Movie</ion-title>
+    <ion-title *ngIf="!new">Edit Movie</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="stacked">Name</ion-label>
+    <ion-input type="text" placeholder="Enter the movie's name" [(ngModel)]="movie.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Description</ion-label>
+    <ion-input type="text" placeholder="Enter a description" [(ngModel)]="movie.description"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Rating</ion-label>
+    <ion-input type="number" placeholder="Enter your rating" [(ngModel)]="movie.rating"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Release Year</ion-label>
+    <ion-input type="number" placeholder="Enter the year the movie was released" [(ngModel)]="movie.releaseYear"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">View Date</ion-label>
+    <ion-input type="date" placeholder="Enter the date when you watched the movie" [(ngModel)]="movie.viewDate"></ion-input>
+  </ion-item>
+</ion-content>
