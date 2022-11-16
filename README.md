@@ -1,0 +1,2 @@
+In order to build the app you must run the commands "ionic build" "npx cap add android" then "npm run openAndroid"
+After that android studio will open the project where you can debug it or build the app
